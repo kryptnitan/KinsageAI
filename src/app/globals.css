@@ -1,0 +1,104 @@
+@import "tailwindcss";
+
+:root {
+  --background: #040815;
+  --foreground: #f8fafc;
+  
+  --card: #0b132b;
+  --card-foreground: #f8fafc;
+  
+  --popover: #0b132b;
+  --popover-foreground: #f8fafc;
+  
+  --primary: #d4af37;
+  --primary-foreground: #040815;
+  
+  --secondary: #1c2541;
+  --secondary-foreground: #f8fafc;
+  
+  --muted: #1c2541;
+  --muted-foreground: #94a3b8;
+  
+  --accent: #d4af37;
+  --accent-foreground: #040815;
+  
+  --destructive: #ef4444;
+  --destructive-foreground: #f8fafc;
+  
+  --border: #1c2541;
+  --input: #1c2541;
+  --ring: #d4af37;
+  
+  --radius: 0.75rem;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  
+  --font-sans: var(--font-geist-sans), ui-sans-serif, system-ui;
+  --font-mono: var(--font-geist-mono), ui-monospace, SFMono-Regular;
+}
+
+* {
+  border-color: var(--border);
+}
+
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans);
+}
+
+/* Custom Scrollbar for premium SaaS feel */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #040815;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #1c2541;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #d4af37;
+}
+
+/* Glassmorphism utility classes */
+.glass-panel {
+  background: rgba(11, 19, 43, 0.4);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(212, 175, 55, 0.1);
+}
+
+.gold-gradient-text {
+  background: linear-gradient(135deg, #f3e5ab 0%, #d4af37 50%, #b8860b 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.gold-border-glow {
+  box-shadow: 0 0 15px rgba(212, 175, 55, 0.15);
+  border: 1px solid rgba(212, 175, 55, 0.3);
+}
